@@ -65,11 +65,7 @@ jobs:
         run: |
           eval "$($HOME/miniconda/bin/conda shell.bash hook)"
           conda activate myenv
-          if [ -f requirements.txt ]; then
-            conda install pip  # pip 설치
-            pip install -r requirements.txt
-          else
-            echo "requirements.txt not found. Skipping pip installation."
-          fi
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - run: pm2 restart BackendAPI
+      - run: pm2 restart BackendAP
+
