@@ -29,7 +29,7 @@ app.post("/chat1", (request, response) => {
     // const scriptPath = path.join(__dirname, "chat1.py");
     // const phythonPath = "python";
     const scriptPath = path.join(__dirname, "chat1.py");
-    console.log(scriptPath);
+    // console.log(scriptPath);
     const phythonPath = path.join(
       "/home/ubuntu/miniconda",
       "envs",
@@ -37,7 +37,7 @@ app.post("/chat1", (request, response) => {
       "bin",
       "python3"
     );
-    console.log(phythonPath);
+    // console.log(phythonPath);
     const result = spawn(phythonPath, [scriptPath, question]);
     let answer = "";
     let hasResponded = false;
